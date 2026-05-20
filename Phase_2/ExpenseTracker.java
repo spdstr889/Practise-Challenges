@@ -8,69 +8,16 @@ public class ExpenseTracker {
 
     //This is the amount to be set by the user
     static void  cal(int option, String inputExpenseNames, ArrayList<String>expenseNames, double expenseAmount, ArrayList<Double>expenseAmountList){
-        
-            if (option==1){
-                if (expenseAmount<=balance){
-                    balance-=expenseAmount;
-                    categoryTotals[0]+=expenseAmount; 
-                }
-                else{
-                    System.out.println("Not enough funds remainng!");
-                }              
-            }
-
-            else if (option==2){
-                if (expenseAmount<=balance){
-                    balance-=expenseAmount;
-                    categoryTotals[1]+=expenseAmount; 
-                }
-                else{
-                    System.out.println("Not enough funds remainng!");
-                }
-            }
-
-            else if (option==3){
-                if (expenseAmount<=balance){
-                    balance-=expenseAmount;
-                    categoryTotals[2]+=expenseAmount; 
-                }
-                else{
-                    System.out.println("Not enough funds remainng!");
-                }              
-            }
-
-            else if (option==4){
-                if (expenseAmount<=balance){
-                    balance-=expenseAmount;
-                    categoryTotals[3]+=expenseAmount; 
-                }
-                else{
-                    System.out.println("Not enough funds remainng!");
-                }             
-            }
-
-            else if (option==5){
-                if (expenseAmount<=balance){
-                    balance-=expenseAmount;
-                    categoryTotals[4]+=expenseAmount; 
-                }
-                else{
-                    System.out.println("Not enough funds remainng!");
-                } 
-            }
-
-            else if (option==6){
-                if (expenseAmount<=balance){
-                    balance-=expenseAmount;
-                    categoryTotals[5]+=expenseAmount; 
-                }
-                else{
-                    System.out.println("Not enough funds remainng!");
-                }
-            }
+        if (expenseAmount<=balance){
+             balance-=expenseAmount;
+             categoryTotals[option-1]+=expenseAmount; 
+        }
+        else{
+        System.out.println("Not enough funds remainng!");
+        }              
              
-            expenseNames.add(inputExpenseNames);
-            expenseAmountList.add(expenseAmount);
+        expenseNames.add(inputExpenseNames);
+        expenseAmountList.add(expenseAmount);
              
     }
     /* This prints stuff */
