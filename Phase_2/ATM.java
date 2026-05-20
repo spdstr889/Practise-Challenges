@@ -1,5 +1,3 @@
-package Phase_2;
-
 import java.util.Scanner;
 public class ATM {
     static double balance=10;
